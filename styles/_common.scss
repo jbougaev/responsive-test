@@ -1,0 +1,20 @@
+﻿div {
+    box-sizing: border-box;
+}
+
+.float-left {
+    float: left;
+}
+a {
+    background-color: transparent;
+}
+
+a:link, a:focus, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+} 
