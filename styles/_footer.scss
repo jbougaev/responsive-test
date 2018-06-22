@@ -1,4 +1,6 @@
-﻿.foot-item {
+﻿@import "_media-query-mixin.scss";
+
+.foot-item {
     display: block;
     float: left;
     min-height: 1px;
@@ -32,13 +34,13 @@
     list-style-type: none;
 }
 
-@media only screen and (min-width:40.063em) {
+ @include get-m-query(medium) {
     .foot-item {
         width: 33.33333%;
     }
 }
 
-@media only screen and (min-width:64.063em) {
+@include get-m-query(large) {
 
     .foot-item {
         width: 16.6666666667%;
