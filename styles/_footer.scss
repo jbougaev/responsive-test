@@ -1,11 +1,10 @@
 ﻿.foot-item {
-   
     display: block;
     float: left;
     min-height: 1px;
     vertical-align: text-top;
     padding: 0 12px;
-    width: 16.6666666667%;
+    width: 100%;
     zoom: 1;
 }
 
@@ -15,6 +14,7 @@
     color: #616161;
     word-break: break-word;
 }
+
 .footer-container .item-title .footer-link {
     color: #616161;
     word-break: break-word;
@@ -22,23 +22,25 @@
 
 .footer-container ul {
     list-style-type: none;
-
 }
 
 .footer-container ul.footer-list {
     font-size: 11px;
     line-height: 16px;
     margin-top: 0;
-
     padding-left: 0;
     list-style-type: none;
 }
 
-@media only screen and (max-width: 1083px) {
-    .foot-item { width:  33.33333%;}
+@media only screen and (min-width:40.063em) {
+    .foot-item {
+        width: 33.33333%;
+    }
 }
 
-@media only screen and (max-width: 539px) {
+@media only screen and (min-width:64.063em) {
 
-    .foot-item { width: 100%; }
+    .foot-item {
+        width: 16.6666666667%;
+    }
 }

@@ -1,4 +1,8 @@
-﻿div {
+﻿body {  
+    min-width:320px; 
+
+}
+div {
     box-sizing: border-box;
 }
 
@@ -18,3 +22,4 @@ a:link, a:focus, a:hover, a:active, a:visited {
     clear: both;
     display: table;
 } 
+

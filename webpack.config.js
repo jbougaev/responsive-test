@@ -43,8 +43,8 @@ module.exports = {
         }),
         new WebpackMd5Hash(),
         new CopyWebpackPlugin([{
-            from: 'assets/images',
-            to: 'assets/images',
+            from: 'assets',
+            to: 'assets',
             toType: 'dir'
         }], { debug: 'debug' }
         )
