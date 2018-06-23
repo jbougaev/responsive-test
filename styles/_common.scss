@@ -1,5 +1,10 @@
-﻿body {  
+﻿@import "_variables.scss";
+
+body {  
     min-width:320px; 
+    color: $grey;
+    font-family: $font;
+    font-size: 16px;
 
 }
 div {
