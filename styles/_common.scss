@@ -3,9 +3,7 @@
 body {  
     min-width:320px; 
     color: $grey;
-    font-family: $font;
-    font-size: 16px;
-
+    font: normal 100% $font;   /*default 16px for most browsers*/
 }
 div {
     box-sizing: border-box;
@@ -27,4 +25,9 @@ a:link, a:focus, a:hover, a:active, a:visited {
     clear: both;
     display: table;
 } 
+
+h1 {
+  font-size: 1.5em;  /* 24px/16px = 1.5 */  
+  font-weight: normal;
+}
 
