@@ -7,7 +7,7 @@
   $hiresdesktops: 80.063em; /* hi-res laptops and desktops */
 
   @if $size == medium {
-    @media only screen and (min-width: $ptablets) { @content; }
+    @media only screen and (min-width: $stablets) { @content; }
   } @else if $size == large {
     @media only screen and (min-width: $blandscape) { @content; }
   }

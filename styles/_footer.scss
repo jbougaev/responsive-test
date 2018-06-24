@@ -2,20 +2,20 @@
 @import "_variables.scss";
 .footer-container {
     .foot-item {
-        float: left;        
-        display: block;        
+        float: left;
+        display: block;
         min-height: 1px;
         vertical-align: text-top;
         padding: 0 1em;
-        width:100%;
+        width: 100%;
     }
     .footer-item-title {
-        font-size: 1em;
-        line-height: 1.25em;     
+        font-size: 0.9em;
+        line-height: 0.9em;
         word-break: break-word;
     }
 
-    .item-title .footer-link {  
+    .item-title .footer-link {
         word-break: break-word;
     }
 
@@ -35,14 +35,37 @@
 
 
 @include get-m-query(medium) {
-    .footer-container .foot-item {
+  
+    .footer-container {
+        .footer-items::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    
+    .foot-item {
         width: 33.33333%;
+        font-size: 1em;
+        line-height: 1.25em;
+    }
     }
 }
 
 @include get-m-query(large) {
-
-    .footer-container .foot-item {
-        width: 16.6666666667%;
+ 
+    .footer-items::after {
+        content: "";
+        clear: both;
+        display: none !important; /*rewrite*/
     }
+
+
+.footer-container {
+    .foot-item {
+        width: 16.6666666667%;
+        font-size: 1em;
+        line-height: 1.25em;
+    }
+}
+
 }
