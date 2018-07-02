@@ -7,8 +7,7 @@
     @include flex();
     @include flex-row();
     justify-content: space-between;
-    width: 100%;
-
+     width: 100%;
     .action-container {
         order: 1;
         flex-basis: 10%;
@@ -21,58 +20,59 @@
     }
 
 
-.logo-container {
-    order: 2;
-    flex-basis: 80%;
-    @extend .header-sub-container;
+    .logo-container {
+        border: 1px solid $lighter-grey;
+        order: 2;
+        flex-basis: 80%;
+        @extend .header-sub-container;
 
-    a {
-        display: block;
-    }
-}
-
-.menu-btn-container {
-    order: 3;
-    flex-basis: 10%;
-    @include flex();
-    align-items: center;
-    flex-basis: 0;
-}
-
-.menu-container {
-    width: 100%;
-    position: absolute;
-    top: 4em;
-    left: 0;
-    @extend .header-sub-container;
-    justify-content: center;
-
-    .menu-items {
-        width: 100%;
-        @include flex();
-        flex-direction: column;
-        position: absolute;
-        top: 0;
-        left: 0;
-        visibility: hidden;
-    }
-
-    .menu-items.is-visible {
-        visibility: visible;
-        background-color: white;
-        .menu-item {
-            border: 1px solid $grey;
-            margin: 2px;
+        a {
+            display: block;
         }
     }
 
-    .menu-item {
-        padding: 5px;
-        margin: 0 5px 0 5px;
-        text-align: center;
-        cursor: pointer;
+    .menu-btn-container {
+        order: 3;
+        flex-basis: 10%;
+        @include flex();
+        align-items: center;
+        flex-basis: 0;
     }
-}
+
+    .menu-container {
+        width: 100%;
+        position: absolute;
+        top: 4em;
+        left: 0;
+        @extend .header-sub-container;
+        justify-content: center;
+
+        .menu-items {
+            width: 100%;
+            @include flex();
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+        }
+
+        .menu-items.is-visible {
+            visibility: visible;
+            background-color: white;
+            .menu-item {
+                border: 1px solid $lighter-grey;
+                margin: 2px;
+            }
+        }
+
+        .menu-item {
+            padding: 5px;
+            margin: 0 5px 0 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+    }
 
 }
 
@@ -103,8 +103,9 @@
         display: none;
     }
 
-    .navigation-container {
-
+    .navigation-container {        
+        margin: 0 auto;
+        overflow: hidden;
         .logo-container {
             flex-basis: 20%;
             order: 1;
@@ -135,5 +136,11 @@
         .menu-btn-container {
             display: none;
         }
+    }
+}
+
+@include get-m-query(large) {
+    .navigation-container {
+        width: $width-large;
     }
 }

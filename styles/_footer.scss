@@ -1,6 +1,9 @@
 ﻿@import "_media-query-mixin.scss";
 @import "_variables.scss";
 .footer-container {
+    margin-top: 50px;
+    background-color: $light-grey;
+    overflow: hidden;
     .foot-item {
         float: left;
         display: block;
@@ -35,37 +38,38 @@
 
 
 @include get-m-query(medium) {
-  
+
     .footer-container {
+
         .footer-items::after {
             content: "";
             clear: both;
             display: table;
         }
-    
-    .foot-item {
-        width: 33.33333%;
-        font-size: 1em;
-        line-height: 1.25em;
-    }
+
+        .foot-item {
+            width: 33.33333%;
+            font-size: 1em;
+            line-height: 1.25em;
+        }
     }
 }
 
 @include get-m-query(large) {
- 
+
     .footer-items::after {
         content: "";
         clear: both;
-        display: none !important; /*rewrite*/
+        display: none !important;
+        /*rewrite*/
     }
 
 
-.footer-container {
-    .foot-item {
-        width: 16.6666666667%;
-        font-size: 1em;
-        line-height: 1.25em;
+    .footer-container {
+        .foot-item {
+            width: 16.6666666667%;
+
+        }
     }
-}
 
 }

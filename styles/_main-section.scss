@@ -1,49 +1,59 @@
 ﻿@import "_variables.scss";
 
 .carusel {
-
-    .item-2-1 {
-        display: grid;
+    img {
+        max-width: 100%;
+    }
+    margin-bottom: 3em;  
+    
+    .item-1-1 {       
+        margin-bottom: 1em;
     }
 
+    .item-2-1 {       
+        margin: 0 1em;
+    }
     .info-card {
-        width: 14em;
-        height: 14em;
-        margin: 0 auto;
-        display: grid;
-        grid-template-rows: 70% 30%;
-
-        img {
-            max-width: 100%;
-        }
-
+        width: 100%; 
+        margin-bottom: 1em;
         .item-link {
+            margin-top: 5px;
             margin-left: 1em;
             cursor: pointer;
         }
     }
 
     @include get-m-query(medium) {
+        display: grid;
+        grid-row-gap: 3em;
+        margin: 0 auto;
+        
+        .item-1-1 {       
+        margin-bottom: auto;
+    }
+
         .item-2-1 {
+             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 1em;
+            margin: 0 1em;
+        }
+
+        .info-card {
+            width: 100%;
+            margin-bottom: 0;
+            display: grid;
+            grid-template-rows: 70% 30%;
+
         }
     }
 
     @include get-m-query(large) {
-        margin: 0 auto;
-        width: 60em;
-        display: grid;
-
-        .large-image {
-            max-width: 100%;
-        }
-
-        .item-1-1 {
-        }
+        width: $width-large;
 
         .item-2-1 {
             grid-template-columns: repeat(4, 1fr);
+
         }
     }
 }
