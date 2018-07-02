@@ -1,13 +1,13 @@
 ﻿@import "_media-query-mixin.scss";
 @import "_variables.scss";
 .footer-container {
-    margin-top: 50px;
+    margin-top: 3em;
     background-color: $light-grey;
     overflow: hidden;
     .foot-item {
         float: left;
         display: block;
-        min-height: 1px;
+        min-height: 0.0625em;
         vertical-align: text-top;
         padding: 0 1em;
         width: 100%;

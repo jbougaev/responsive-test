@@ -15,13 +15,13 @@
         @extend .header-sub-container;
 
         div {
-            margin: 0 5px;
+            margin: 0 0.3125em;
         }
     }
 
 
     .logo-container {
-        border: 1px solid $lighter-grey;
+        border: 0.0625em solid $lighter-grey;
         order: 2;
         flex-basis: 80%;
         @extend .header-sub-container;
@@ -61,14 +61,14 @@
             visibility: visible;
             background-color: white;
             .menu-item {
-                border: 1px solid $lighter-grey;
-                margin: 2px;
+                border: 0.0625em solid $lighter-grey;
+                margin: 0.125em;
             }
         }
 
         .menu-item {
-            padding: 5px;
-            margin: 0 5px 0 5px;
+            padding: 0.3125em;
+            margin: 0 0.3125em;
             text-align: center;
             cursor: pointer;
         }
@@ -91,11 +91,11 @@
 .header-container {
     position: relative;
     height: 4em;
-    padding: 10px;
+    padding: 0.625em;
     width: 100%;
     @extend .clearfix::after;
     @include flex();
-    min-width: 320px;
+    min-width: 20em;
 }
 
 @include get-m-query(medium) {
