@@ -1,5 +1,5 @@
 ﻿import "../styles/main.scss";
-import Header from '../src/header.js';
+import Header from './Header';
 
 let h = new Header();
 h.init();

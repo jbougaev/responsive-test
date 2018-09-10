@@ -91,7 +91,7 @@
 .header-container {
     position: relative;
     height: 4em;
-    padding: 0.625em;
+    padding: 1em;
     width: 100%;
     @extend .clearfix::after;
     @include flex();

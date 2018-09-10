@@ -5,7 +5,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server --open --mode development",
+    "start": "webpack-dev-server --port 3003 --open --mode development --watch",
     "build": "webpack -p --mode development",
     "watch": "webpack --watch --mode development"
   },
@@ -26,7 +26,10 @@
     "style-loader": "^0.20.3",
     "webpack": "^4.4.1",
     "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.8",
     "webpack-md5-hash": "0.0.6"
-
+  },
+  "dependencies": {
+    "url-loader": "^1.1.1"
   }
 }

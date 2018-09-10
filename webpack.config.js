@@ -1,13 +1,15 @@
 ﻿const path = require('path'),
-//const ExtractTextPlugin = require('extract-text-webpack-plugin');
- HtmlWebpackPlugin = require('html-webpack-plugin'),
- WebpackMd5Hash = require('webpack-md5-hash'),
- MiniCssExtractPlugin = require("mini-css-extract-plugin"),
- CleanWebpackPlugin = require('clean-webpack-plugin'),
- CopyWebpackPlugin = require('copy-webpack-plugin');
+    //const ExtractTextPlugin = require('extract-text-webpack-plugin');
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    WebpackMd5Hash = require('webpack-md5-hash'),
+    MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+    CleanWebpackPlugin = require('clean-webpack-plugin'),
+    CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: {
+        main: './src/index.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
@@ -24,7 +26,18 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-            }
+            },
+            {
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }
+          }
+        ]
+      }
         ]
     },
     plugins: [
@@ -46,7 +59,8 @@ module.exports = {
             from: 'assets',
             to: 'assets',
             toType: 'dir'
-        }], { debug: 'debug' }
-        )
+        }], {
+            debug: 'debug'
+        })
     ]
 };
