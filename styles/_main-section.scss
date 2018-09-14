@@ -1,20 +1,46 @@
 ﻿@import "_variables.scss";
 
-.carusel {
+.main-section-container {
     img {
         max-width: 100%;
+        width: 100%;
     }
-    margin-bottom: 3em;  
-    
-    .item-1-1 {       
-        margin: 0 1em 1em 1em;
+    margin-bottom: 3em;
+
+    .carusel-container {
+        width: inherit;
+        margin: 0 1em;
+        margin-bottom: 1em;
+        & > .container {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        @media (min-width: 1200px) {
+            & > .container {
+                width: inherit;
+            }
+        }
+        @media (min-width: 992px) {
+            & > .container {
+
+                width: inherit;
+            }
+        }
+        @media (min-width: 768px) {
+            & > .container {
+
+                width: inherit;
+            }
+        }
     }
 
-    .item-2-1 {       
+    .info-card-container {
         margin: 0 1em;
     }
+
     .info-card {
-        width: 100%; 
+        width: 100%;
         margin-bottom: 1em;
         .item-link {
             margin-top: 0.3125em;
@@ -27,18 +53,33 @@
         display: grid;
         grid-row-gap: 3em;
         margin: 0 auto;
-        
-        .item-1-1 {       
-        margin-bottom: auto;
-    }
 
-        .item-2-1 {
-             display: grid;
+        .carusel-container {
+            width: inherit;
+            overflow: auto;
+            margin: 0 1em;
+            .carusel {
+                margin-bottom: auto;
+                margin: 0 1em 1em 1em;
+                width: 300%;
+
+                > a {
+                    display: inline;
+                    float: left;
+                    width: 100%;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+        .info-card-container {
+            display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-gap: 1em;
             margin: 0 1em;
         }
-
         .info-card {
             width: 100%;
             margin-bottom: 0;
@@ -51,9 +92,26 @@
     @include get-m-query(large) {
         width: $width-large;
 
-        .item-2-1 {
+        .carusel-container {
+            width: inherit;
+            overflow: auto;
+            margin: 0;
+            .carusel {
+                margin: 0;
+                width: 3*$width-large;
+                > a {
+                    display: inline;
+                    float: left;
+                    width: $width-large;
+                }
+            }
+        }
+
+        .info-card-container {
             grid-template-columns: repeat(4, 1fr);
+            margin: 0;
 
         }
     }
+
 }

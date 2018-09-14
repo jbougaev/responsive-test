@@ -60,6 +60,7 @@
         .menu-items.is-visible {
             visibility: visible;
             background-color: white;
+            z-index: 1000;
             .menu-item {
                 border: 0.0625em solid $lighter-grey;
                 margin: 0.125em;
@@ -71,6 +72,9 @@
             margin: 0 0.3125em;
             text-align: center;
             cursor: pointer;
+            >h1{
+                font-size:1.5em;
+            }
         }
     }
 
